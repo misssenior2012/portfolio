@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Work+Sans:wght@700&display=swap');
+
+:root { --ink:#17171a; --paper:#fff; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:"Inter", Arial, sans-serif; font-weight:400; letter-spacing:.01em; }
+h1, h2, h3 { font-family:"Work Sans", Arial, sans-serif; font-weight:700; }
+.portfolio { max-width:1920px; margin:auto; padding:clamp(2.5rem, 6vw, 5.5rem) clamp(1.5rem, 4.4vw, 5.2rem) 4rem; }
+.intro { margin-bottom:clamp(4.5rem, 8vw, 8rem); }
+.name, h1, .eyebrow { margin:0; letter-spacing:-.065em; line-height:.96; }
+.name { font-size:clamp(3.6rem, 7vw, 7.1rem); font-family:"Work Sans", Arial, sans-serif; font-weight:700; }
+h1 { margin-top:.13em; font-size:clamp(3rem, 5.5vw, 5.9rem); font-weight:700; }
+.eyebrow { margin-top:.4em; font-size:30px; font-weight:300; line-height:1.08; letter-spacing:-.035em; }
+.scribble { display:block; width:clamp(17rem, 25vw, 29rem); max-width:100%; margin-top:1.15rem; }
+.projects { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:clamp(1rem, 2.5vw, 3.2rem); align-items:start; }
+.project { color:inherit; text-decoration:none; display:block; min-width:0; }
+.art { display:block; aspect-ratio: .92; overflow:hidden; transition:transform .25s ease, box-shadow .25s ease; }
+.art img { display:block; width:100%; height:100%; object-fit:cover; filter:url(#hand-drawn-wiggle); }
+.motion-filters { position:absolute; width:0; height:0; overflow:hidden; }
+.high-five .art { --tilt:1.42deg; --hover-tilt:-2.58deg; transform:rotate(var(--tilt)); }
+.app-ia .art { --tilt:6deg; --hover-tilt:2deg; transform:rotate(var(--tilt)); }
+.childcare .art { --tilt:-2deg; --hover-tilt:2deg; transform:rotate(var(--tilt)); }
+.magnetic .art { --tilt:4deg; --hover-tilt:0deg; transform:rotate(var(--tilt)); }
+.project-copy { display:block; padding-top:clamp(1.5rem, 2vw, 2.5rem); }
+.project-copy strong { display:block; font-family:"Work Sans", Arial, sans-serif; font-size:clamp(1.45rem, 2.25vw, 2.85rem); font-weight:700; line-height:1; letter-spacing:-.055em; }
+.project-copy span { display:block; margin-top:.7rem; max-width:80%; font-size:clamp(1rem, 1.45vw, 1.65rem); line-height:1.06; letter-spacing:.01em; }
+.project:hover .art, .project:focus-visible .art { transform:translateY(-.5rem) rotate(var(--hover-tilt)); box-shadow:0 .7rem 1.4rem rgb(0 0 0 / .13); }
+.project:focus-visible { outline:3px solid #1266c3; outline-offset:7px; }
+@media (min-width: 768px) { .eyebrow { font-size:clamp(2.25rem, 3vw, 3.25rem); } }
+@media (max-width: 880px) { .projects { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:3rem 1.5rem; } }
+@media (max-width: 510px) { .portfolio { padding-top:2.25rem; } .intro { margin-bottom:4rem; } .projects { grid-template-columns:1fr; gap:7.3125rem; } .art { aspect-ratio:1.15; } .project-copy strong { font-size:2rem; } .project-copy span { font-size:1.25rem; } }
+@media (prefers-reduced-motion: reduce) { .art img { filter:none; } .art, .project:hover .art, .project:focus-visible .art { transition:none; transform:rotate(var(--tilt)); } }

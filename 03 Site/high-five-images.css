@@ -1,0 +1,17 @@
+/* Individual, lightly varied image angles. */
+.visual { border:0; }
+.mobile-logo { display:none; }
+.case-name { font-size:50px; }
+.case-name::before, .case-name::after { content:none; }
+.case-lede { max-width:17ch; font-size:30px !important; font-weight:300 !important; line-height:1.1; letter-spacing:-.035em; }
+.case-copy h2 { font-family:"Work Sans", Arial, sans-serif; font-size:clamp(1.45rem, 2.25vw, 2.85rem); font-weight:700; line-height:1; letter-spacing:-.055em; }
+.logo { transform:rotate(1.3deg); }
+.phones { transform:rotate(-1.5deg); }
+.app { transform:rotate(.8deg); }
+.roadmap { transform:rotate(-.6deg); }
+.workshop { transform:rotate(1.7deg); }
+
+@media (max-width:1024px) {
+  .mobile-logo { display:block; width:min(100%, 620px); margin:0 0 3rem; transform:rotate(1.3deg); }
+  .case-gallery .logo { display:none; }
+}

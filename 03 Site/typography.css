@@ -1,0 +1,10 @@
+/* Slightly more open tracking for reading copy. */
+body { letter-spacing:.01em; }
+.project-copy span,
+.details p,
+.case-copy p,
+.case-copy li { letter-spacing:.01em !important; line-height:1.5 !important; }
+
+.project-copy span,
+.details p,
+.case-copy section { max-width:90% !important; }

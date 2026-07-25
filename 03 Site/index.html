@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Selected work by Karen Senior, lead designer." />
+    <title>Karen Senior — Lead designer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="typography.css" />
+  </head>
+  <body>
+    <svg class="motion-filters" aria-hidden="true" focusable="false">
+      <filter id="hand-drawn-wiggle" x="-3%" y="-3%" width="106%" height="106%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.009" numOctaves="2" seed="8" result="noise">
+          <animate attributeName="baseFrequency" values="0.018 0.012;0.009 0.022;0.022 0.011;0.018 0.012" dur="1.9s" repeatCount="indefinite" />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+    <main class="portfolio">
+      <header class="intro">
+        <p class="name">Karen Senior</p>
+        <h1>Lead designer</h1>
+        <p class="eyebrow">Selected portfolio</p>
+        <svg class="scribble" viewBox="0 0 225 20" aria-hidden="true"><path d="M2 7c12-9 18 10 31 1 12-9 21 8 34 0 10-7 19 9 31 0 13-10 22 10 35 0 11-8 22 9 34 1 11-7 20 6 31 2 8-3 12 1 19 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+      </header>
+
+      <section class="projects" aria-label="Selected projects">
+        <a class="project high-five" href="co-op-high-five.html">
+          <span class="art"><img src="assets/high-five-hero.png" alt="Co-op High Five illustration" /></span>
+          <span class="project-copy"><strong>Co-op High Five!</strong><span>Leading the evolution of Co-op's flagship Membership proposition.</span></span>
+        </a>
+        <a class="project app-ia" href="co-op-app-ia.html">
+          <span class="art"><img src="assets/coop-ia-hero.png" alt="Co-op App information architecture sketch" /></span>
+          <span class="project-copy"><strong>Co-op App IA</strong><span>Creating a scalable information architecture that helps members find the right content at the right time.</span></span>
+        </a>
+        <a class="project childcare" href="connect-childcare.html">
+          <span class="art"><img src="assets/connect-childcare-hero.png" alt="Connect Childcare billing sketch" /></span>
+          <span class="project-copy"><strong>Connect Childcare</strong><span>Simplifying a complex billing system by balancing diverse customer needs with business constraints.</span></span>
+        </a>
+        <a class="project magnetic" href="magnetic-north.html">
+          <span class="art"><img src="assets/magneticnorth-hero.png" alt="magneticNorth lettering illustration" /></span>
+          <span class="project-copy"><strong>magneticNorth</strong><span>A decade designing digital experiences where interaction, storytelling and visual craft came together.</span></span>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
