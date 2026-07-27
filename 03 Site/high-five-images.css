@@ -1,17 +1,31 @@
 /* Individual, lightly varied image angles. */
-.visual { border:0; }
+.visual { border:2px solid #EDEDED; box-shadow:4px 4px 20px 0 rgba(0, 0, 0, .04); }
 .mobile-logo { display:none; }
-.case-name { font-size:50px; }
+.mobile-inline { display:none; }
+.mobile-heading-image { display:none; }
+.case-name { font-size:clamp(3rem, 5vw, 5rem); line-height:.96; letter-spacing:-.065em; }
 .case-name::before, .case-name::after { content:none; }
-.case-lede { max-width:17ch; font-size:30px !important; font-weight:300 !important; line-height:1.1; letter-spacing:-.035em; }
-.case-copy h2 { font-family:"Work Sans", Arial, sans-serif; font-size:clamp(1.45rem, 2.25vw, 2.85rem); font-weight:700; line-height:1; letter-spacing:-.055em; }
-.logo { --tilt:1.3deg; transform:rotate(var(--tilt)); }
-.phones { --tilt:-1.5deg; transform:rotate(var(--tilt)); }
-.app { --tilt:.8deg; transform:rotate(var(--tilt)); }
-.roadmap { --tilt:-.6deg; transform:rotate(var(--tilt)); }
-.workshop { --tilt:1.7deg; transform:rotate(var(--tilt)); }
+.case-lede { max-width:none; font-family:"Inter", Arial, sans-serif !important; font-size:28px !important; font-weight:300 !important; line-height:33.6px !important; letter-spacing:0em !important; }
+.case-copy h2 { font-family:"Work Sans", Arial, sans-serif; font-size:1.75rem; font-weight:700; line-height:1; letter-spacing:-.055em; }
+.case-copy p,.case-copy li { font-size:clamp(1rem, 1.15vw, 1.25rem); }
+.case-copy li+li { margin-top:.9rem; }
+.logo { --tilt:0deg; transform:rotate(var(--tilt)); }
+.phones { --tilt:-4deg; transform:rotate(var(--tilt)); }
+.app { --tilt:3deg; transform:rotate(var(--tilt)); }
+.roadmap { --tilt:-3deg; transform:rotate(var(--tilt)); }
+.workshop { --tilt:2deg; transform:rotate(var(--tilt)); }
 
 @media (max-width:1024px) {
-  .mobile-logo { --tilt:1.3deg; display:block; width:min(100%, 620px); margin:0 0 3rem; transform:rotate(var(--tilt)); }
+  .mobile-logo { display:none; }
+  .mobile-heading-image { display:block; width:100%; margin:0 0 4rem; transform:none; }
+  .mobile-heading-image img { display:block; width:100%; height:auto; }
+  .mobile-inline { display:block; width:100%; margin:0 0 4rem; transform:none; }
+  .mobile-inline img { display:block; width:100%; height:auto; }
+  .case-gallery { display:none; }
+  .case-with-gallery .case-gallery { display:none; }
   .case-gallery .logo { display:none; }
+}
+
+@media (max-width:510px) {
+  .case-copy p,.case-copy li { font-size:1.25rem; }
 }

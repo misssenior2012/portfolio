@@ -20,7 +20,9 @@ const updateStackedGallery = () => {
   const end = copy.offsetTop + copy.offsetHeight - window.innerHeight * 0.45;
   const progress = Math.min(1, Math.max(0, (window.scrollY - start) / Math.max(1, end - start)));
   const activeCard = Math.min(stackedCards.length - 1, Math.floor(progress * stackedCards.length));
-  stackedCards.forEach((card, index) => card.classList.toggle("is-visible", index <= activeCard));
+  stackedCards.forEach((card, index) => {
+    card.classList.toggle("is-visible", index <= activeCard);
+  });
 };
 window.addEventListener("scroll", updateStackedGallery, { passive: true });
 window.addEventListener("resize", updateStackedGallery);
