@@ -22,7 +22,9 @@ h1 { width:100%; max-width:42ch; margin-top:.2em; font-family:"Inter", Arial, sa
 .childcare .art { --tilt:-2deg; --hover-tilt:2deg; transform:rotate(var(--tilt)); }
 .magnetic .art { --tilt:4deg; --hover-tilt:0deg; transform:rotate(var(--tilt)); }
 .project-copy { display:block; padding-top:clamp(1.5rem, 2vw, 2.5rem); }
-.project-copy strong { display:block; font-family:"Work Sans", Arial, sans-serif; font-size:1.75rem; font-weight:700; line-height:1; letter-spacing:-.055em; }
+.project-copy strong { display: inline-block; position:relative; font-family:"Work Sans", Arial, sans-serif; font-size:1.75rem; font-weight:700; line-height:1; letter-spacing:-.055em; }
+.project-copy strong::after { content:""; position:absolute; left:0; right:0; bottom:-.18em; height:2px; background:currentColor; transform:scaleX(0); transform-origin:left center; transition:transform .25s ease; }
+.project:hover .project-copy strong::after, .project:focus-visible .project-copy strong::after { transform:scaleX(1); }
 .project-copy span { display:block; margin-top:.7rem; max-width:80%; font-size:clamp(1rem, 1.15vw, 1.25rem); line-height:1.18; letter-spacing:.01em; }
 .project:hover .art, .project:focus-visible .art { transform:translateY(-.5rem) rotate(var(--hover-tilt)); box-shadow:0 .7rem 1.4rem rgb(0 0 0 / .13); }
 .project:focus-visible { outline:3px solid #1266c3; outline-offset:7px; }
